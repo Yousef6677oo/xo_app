@@ -8,7 +8,7 @@ class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 83, 21, 210),
+      backgroundColor: AppColors.primaryColor,
       body: SizedBox(
         width: double.infinity,
         child: Column(
@@ -40,12 +40,31 @@ class FirstScreen extends StatelessWidget {
             ),
             OutlinedButton(
               onPressed: () {
-                Navigator.pushReplacementNamed(context, LoginScreen.routeName);
+                Navigator.pushNamed(context, LoginScreen.routeName);
               },
               style: OutlinedButton.styleFrom(
                   backgroundColor: AppColors.accentColor),
-              child: const Text("New Games",
-                  style: TextStyle(fontSize: 26, color: Colors.black)),
+              child:  Container(
+                alignment: Alignment.center,
+                width: MediaQuery.of(context).size.width*0.5,
+                height: MediaQuery.of(context).size.height*0.07,
+                child: const Text("New Games",style: TextStyle(fontSize: 26, color: Colors.black)),
+              ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
+            ),
+            OutlinedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, LoginScreen.routeName);
+              },
+              style: OutlinedButton.styleFrom(backgroundColor: Colors.transparent,side: BorderSide(width: 3.0, color: AppColors.accentColor),),
+              child:  Container(
+                alignment: Alignment.center,
+                width: MediaQuery.of(context).size.width*0.5,
+                height: MediaQuery.of(context).size.height*0.07,
+                child:  Text("Scores",style: TextStyle(fontSize: 26, color: AppColors.whiteColor)),
+              ),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,

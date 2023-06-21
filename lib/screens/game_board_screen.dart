@@ -63,7 +63,7 @@ class _GameBoardScreenState extends State<GameBoardScreen> {
                         style: TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
-                            color: AppColors.primaryColor),
+                            color: AppColors.whiteColor),
                       ),
                       const Text("o",
                           style: TextStyle(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utilities/app_colors.dart';
+
 class XOButton extends StatelessWidget {
   int index;
   String digitName;
@@ -14,8 +16,8 @@ class XOButton extends StatelessWidget {
       padding: const EdgeInsets.all(5.0),
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-          foregroundColor: Color(0xffe5c521),
-          backgroundColor: Color(0xff131454),
+          foregroundColor: AppColors.accentColor,
+          backgroundColor: AppColors.primaryColor,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
               )

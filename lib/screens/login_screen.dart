@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xo/utilities/app_colors.dart';
 
 import 'game_board_screen.dart';
 
@@ -11,19 +12,19 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: const Color.fromARGB(255, 83, 21, 210),
+      backgroundColor: AppColors.primaryColor,
       body: Center(
         child: Column(
           children: [
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.10,
             ),
-            const Text(
+             Text(
               "Enter Player Name",
               style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 229, 197, 33)),
+                  color: AppColors.accentColor),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
@@ -33,22 +34,22 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.1,
                 ),
-                const Text(
+                 Text(
                   "X",
                   style: TextStyle(
                       fontSize: 50,
                       fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 229, 197, 33)),
+                      color: AppColors.accentColor),
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.05,
                 ),
-                const Text(
+                 Text(
                   "Player 1",
                   style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                      color: AppColors.whiteColor),
                 )
               ],
             ),
@@ -60,7 +61,7 @@ class LoginScreen extends StatelessWidget {
                 },
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.white,
+                  fillColor: AppColors.whiteColor,
                   border: OutlineInputBorder(
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(10)),
@@ -75,22 +76,22 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.1,
                 ),
-                const Text(
+                 Text(
                   "O",
                   style: TextStyle(
                       fontSize: 50,
                       fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 229, 197, 33)),
+                      color: AppColors.accentColor),
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.05,
                 ),
-                const Text(
+                 Text(
                   "Player 2",
                   style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                      color: AppColors.whiteColor),
                 )
               ],
             ),
@@ -102,7 +103,7 @@ class LoginScreen extends StatelessWidget {
                 },
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.white,
+                  fillColor: AppColors.whiteColor,
                   border: OutlineInputBorder(
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(10)),
@@ -118,11 +119,11 @@ class LoginScreen extends StatelessWidget {
                     context, GameBoardScreen.routeName,arguments: GameBoardScreenArguments(player1,player2));
               },
               style: OutlinedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 229, 197, 33)),
-              child: const Padding(
+                  backgroundColor: AppColors.accentColor),
+              child:  Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text("Start Game",
-                    style: TextStyle(fontSize: 26, color: Colors.white)),
+                    style: TextStyle(fontSize: 26, color: AppColors.whiteColor)),
               ),
             ),
           ],
